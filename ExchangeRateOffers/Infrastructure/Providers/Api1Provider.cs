@@ -10,7 +10,7 @@ namespace ExchangeRateOffers.Infrastructure.Providers
 
         public async Task<ExchangeResponse> GetExchangeRateAsync(ExchangeRequest request)
         {
-            await Task.Delay(300); // simulate latency
+            await Task.Delay(300); // simula latencia
             string json = "{\"rate\": 0.92}";
             var data = JsonConvert.DeserializeObject<dynamic>(json);
             decimal rate = (decimal)data.rate;
